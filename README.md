@@ -17,9 +17,23 @@ Add your answers inline, below, with your pull request.
 
 1. List all of the main states a process may be in at any point in time on a standard Unix system. Briefly explain what each of these states means.
 
+- 
+running: the process is currently running.
+stopped: the process is currently stopped.
+interruptable: the process is currently stopped, and is waiting to be triggered. 
+uninterruptable: the process is stopped and is waiting for hardware to trigger it. 
+zombie: A zombie process is a process that has been executed, but still has an entry in the processtable (terminated state).
+orphaned: An orphaned process is one that is still running after its parent has stopped. 
+
+
 2. What is a zombie process? How does one get created? How does one get destroyed?
 
+This is when the child process has stopped, but still has an entry in the process table. It is created when the child is done, but the parent hasnt picked up its exit code. It is cleared away by the cpu. 
+
 3. What are some of the benefits of working in a compiled language versus a non-compiled language? More specifically, what benefits are there to be had from taking the extra time to compile our code?
+
+compiled languages are faster. 
+
 
 
 ## Task 2
